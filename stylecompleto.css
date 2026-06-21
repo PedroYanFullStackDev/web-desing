@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding: clamp(16px, 4vw, 40px) 16px 48px;
+    font-family: "Arimo", sans-serif;
+}
+
+body,
+button,
+a {
+    font-family: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(1200px, calc(100% - 32px));
+    margin: 0 auto;
+    text-align: center;
+    gap: clamp(16px, 3vw, 28px);
+}
+
+hr {
+    width: min(90%, 900px);
+    margin: 0;
+}
+
+body > center > img:first-of-type {
+    width: min(90%, 420px);
+}
+
+#avg {
+    width: min(90%, 900px);
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: clamp(2.6rem, 8vw, 5rem);
+    font-weight: 900;
+    margin: 0;
+}
+
+#cardss {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(20px, 4vw, 36px);
+}
+
+#cardshero {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: clamp(16px, 3vw, 24px);
+    align-items: stretch;
+    justify-content: center;
+    justify-items: center;
+}
+
+.cards {
+    width: 100%;
+    max-width: 280px;
+    min-height: 420px;
+    background-color: rgb(15, 15, 15);
+    border-radius: 20px;
+    border: solid 5px red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-bottom: 18px;
+    gap: 16px;
+}
+
+#stan {
+    transform: scaleX(-1);
+}
+
+.cards img {
+    width: 100%;
+}
+
+p {
+    color: white;
+    text-align: justify;
+    width: min(100%, 700px);
+    margin: 0;
+    font-weight: bold;
+    line-height: 1.7;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+}
+
+#sectionmarvel {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(20px, 4vw, 40px);
+}
+
+.cardimg {
+    width: 100%;
+    height: clamp(220px, 30vw, 300px);
+    object-fit: cover;
+}
+
+button {
+    background-color: red;
+    border: none;
+    margin-top: 0;
+    height: 50px;
+    width: min(80%, 220px);
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: clamp(0.95rem, 2vw, 1rem);
+    cursor: pointer;
+}
+
+.hr-icon {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    width: min(90%, 900px);
+}
+
+.hr-icon .linha {
+    flex: 1;
+    border-bottom: 1px solid green;
+}
+
+.hr-icon .icone {
+    padding: 0 8px;
+    font-size: 10px;
+}
+
+.hr-icon2 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    width: min(90%, 900px);
+}
+
+.hr-icon2 .linha2 {
+    flex: 1;
+    border-bottom: 1px solid red;
+}
+
+.hr-icon2 .icone2 {
+    padding: 0 8px;
+    font-size: 10px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-inline: 12px;
+    }
+
+    #sectionmarvel {
+        flex-direction: column;
+    }
+
+    #sectionmarvel p {
+        width: 100%;
+    }
+
+    .cards {
+        max-width: 100%;
+        min-height: 380px;
+    }
+
+    .cardimg {
+        height: 240px;
+    }
+
+    button {
+        width: min(90%, 240px);
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: clamp(2.2rem, 15vw, 3.2rem);
+    }
+
+    .hr-icon,
+    .hr-icon2 {
+        width: 100%;
+    }
+
+    #cardshero {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        min-height: 360px;
+    }
+}
